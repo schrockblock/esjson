@@ -1,0 +1,26 @@
+PODS:
+  - ESJSON (0.1.0):
+    - ISO8601DateFormatter
+  - Expecta (1.0.5)
+  - ISO8601DateFormatter (0.8)
+  - Specta (1.0.5)
+
+DEPENDENCIES:
+  - ESJSON (from `../`)
+  - Expecta
+  - ISO8601DateFormatter
+  - Specta
+
+EXTERNAL SOURCES:
+  ESJSON:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ESJSON: dd035d3175ff8f55113f08fb8e003e41214fa77c
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
+  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
+
+PODFILE CHECKSUM: 3093c1077690c8590db776ec341fdd85e0f8b7c6
+
+COCOAPODS: 1.1.1

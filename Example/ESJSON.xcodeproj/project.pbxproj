@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49888E6C1DCD9D9B0033A087 /* ESServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49888E6B1DCD9D9B0033A087 /* ESServerObject.m */; };
+		49888E6F1DCD9DA90033A087 /* ESHuman.m in Sources */ = {isa = PBXBuildFile; fileRef = 49888E6E1DCD9DA90033A087 /* ESHuman.m */; };
+		49888E721DCD9DC00033A087 /* ESCraft.m in Sources */ = {isa = PBXBuildFile; fileRef = 49888E711DCD9DC00033A087 /* ESCraft.m */; };
+		49888E751DCD9DCC0033A087 /* ESHumanShip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49888E741DCD9DCC0033A087 /* ESHumanShip.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,6 +43,14 @@
 		0BDE937DF6728D60977716CA /* Pods-ESJSON_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESJSON_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ESJSON_Example/Pods-ESJSON_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0D953FCF9180729D62443B85 /* Pods_ESJSON_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESJSON_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A445B920D309FED42F2A97 /* Pods-ESJSON_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESJSON_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESJSON_Tests/Pods-ESJSON_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		49888E6A1DCD9D9B0033A087 /* ESServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESServerObject.h; sourceTree = "<group>"; };
+		49888E6B1DCD9D9B0033A087 /* ESServerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESServerObject.m; sourceTree = "<group>"; };
+		49888E6D1DCD9DA90033A087 /* ESHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHuman.h; sourceTree = "<group>"; };
+		49888E6E1DCD9DA90033A087 /* ESHuman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHuman.m; sourceTree = "<group>"; };
+		49888E701DCD9DC00033A087 /* ESCraft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCraft.h; sourceTree = "<group>"; };
+		49888E711DCD9DC00033A087 /* ESCraft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCraft.m; sourceTree = "<group>"; };
+		49888E731DCD9DCC0033A087 /* ESHumanShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHumanShip.h; sourceTree = "<group>"; };
+		49888E741DCD9DCC0033A087 /* ESHumanShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHumanShip.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ESJSON_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESJSON_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,11 +70,11 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		750B1DBC35B9123695D5596B /* ESJSON.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ESJSON.podspec; path = ../ESJSON.podspec; sourceTree = "<group>"; };
+		750B1DBC35B9123695D5596B /* ESJSON.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ESJSON.podspec; path = ../ESJSON.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D620E4AE3E77A4E6A31C97BE /* Pods_ESJSON_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESJSON_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDCABF442C4E554E06FCDDC8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F02D197B2239F6A9FD017191 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EDCABF442C4E554E06FCDDC8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F02D197B2239F6A9FD017191 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F7051309FA19AC46E6E99DB6 /* Pods-ESJSON_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESJSON_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESJSON_Example/Pods-ESJSON_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FD43EF2E5D5FC584EE5AC5E3 /* Pods-ESJSON_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESJSON_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ESJSON_Tests/Pods-ESJSON_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +160,14 @@
 				6003F5A6195388D20070C39A /* ESViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				49888E6A1DCD9D9B0033A087 /* ESServerObject.h */,
+				49888E6B1DCD9D9B0033A087 /* ESServerObject.m */,
+				49888E6D1DCD9DA90033A087 /* ESHuman.h */,
+				49888E6E1DCD9DA90033A087 /* ESHuman.m */,
+				49888E701DCD9DC00033A087 /* ESCraft.h */,
+				49888E711DCD9DC00033A087 /* ESCraft.m */,
+				49888E731DCD9DCC0033A087 /* ESHumanShip.h */,
+				49888E741DCD9DCC0033A087 /* ESHumanShip.m */,
 			);
 			name = "Example for ESJSON";
 			path = ESJSON;
@@ -244,7 +264,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ES;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Elliot;
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -391,7 +411,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* ESAppDelegate.m in Sources */,
+				49888E6C1DCD9D9B0033A087 /* ESServerObject.m in Sources */,
+				49888E751DCD9DCC0033A087 /* ESHumanShip.m in Sources */,
 				6003F5A7195388D20070C39A /* ESViewController.m in Sources */,
+				49888E6F1DCD9DA90033A087 /* ESHuman.m in Sources */,
+				49888E721DCD9DC00033A087 /* ESCraft.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,14 +471,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -468,7 +497,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -487,13 +516,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -501,6 +535,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -517,6 +552,7 @@
 				GCC_PREFIX_HEADER = "ESJSON/ESJSON-Prefix.pch";
 				INFOPLIST_FILE = "ESJSON/ESJSON-Info.plist";
 				MODULE_NAME = ExampleApp;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -556,6 +592,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ESJSON_Example.app/ESJSON_Example";

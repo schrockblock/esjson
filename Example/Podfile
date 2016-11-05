@@ -2,11 +2,12 @@ use_frameworks!
 
 target 'ESJSON_Example' do
   pod 'ESJSON', :path => '../'
+  pod 'ISO8601DateFormatter'
 
   target 'ESJSON_Tests' do
     inherit! :search_paths
-
+    
     pod 'Specta'
-  pod 'Expecta'
+    pod 'Expecta'
   end
 end

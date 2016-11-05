@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ESJSON'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ESJSON.'
+  s.summary          = 'ESJSON makes going between JSON and objects dead simple.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+ESJSON uses the Objective C runtime to go from objects to JSON and back. For most classes, it's as simple as calling `toJson:` and `modelOfClass:fromJson:`. These methods automatically convert between snake case and llama case, convert primitives to the right type, and make `NSDate`s into ISO8601 format. Customization of keys can be accomplished by implementing a class method returning a dictionary of property names and json keys.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/ESJSON'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/schrockblock/esjson'
+  s.author           = { 'Elliot' => '' }
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Elliot' => 'elliot.schrock@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/ESJSON.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/schrockblock/esjson.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/schrockblock'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ESJSON/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ESJSON' => ['ESJSON/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'ISO8601DateFormatter'
 end

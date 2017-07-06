@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ESJSON'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'ESJSON makes going between JSON and objects dead simple.'
 
 # This description is used to generate tags and improve search results.

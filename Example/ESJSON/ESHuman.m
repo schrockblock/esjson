@@ -18,6 +18,7 @@
     neo.name = @"Neo";
     neo.age = 25;
     neo.hasTakenRedPill = YES;
+    neo.titles = @[@"The One", @"The Messiah"];
     return neo;
 }
 

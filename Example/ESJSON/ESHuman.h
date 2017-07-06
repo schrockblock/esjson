@@ -11,10 +11,12 @@
 
 @interface ESHuman : ESServerObject
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *hairColor;
 @property (nonatomic) int age;
 @property (nonatomic) BOOL hasTakenRedPill;
 @property (nonatomic, strong) ESHumanShip *ship;
 @property (nonatomic, strong) ESHuman *loveInterest;
+@property (nonatomic, strong) NSArray *titles;
 
 + (ESHuman *)generateNeo;
 + (ESHuman *)generateTrinity;

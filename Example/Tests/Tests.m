@@ -22,7 +22,7 @@ describe(@"fromJson", ^{
         ESHuman *neo = [ESHuman generateNeo];
         NSDictionary *shipJson = @{@"id":@1001};
         NSDictionary *trinityJson = @{@"id":@2,@"name":@"Trinity",@"age":@28};
-        NSDictionary *json = @{@"id":@(neo.objectId),@"name":neo.name,@"age":@(neo.age), @"ship":shipJson, @"love_interest":trinityJson, @"has_taken_red_pill":@YES};
+        NSDictionary *json = @{@"id":@(neo.objectId),@"name":neo.name,@"age":@(neo.age), @"ship":shipJson, @"love_interest":trinityJson, @"has_taken_red_pill":@YES, @"titles":neo.titles, @"hair_color":[NSNull null]};
         neo = [ESJSON modelOfClass:[ESHuman class] fromJson:json];
         
         expect(neo.objectId).to.equal(1);
@@ -30,10 +30,15 @@ describe(@"fromJson", ^{
         expect(neo.age).to.equal(25);
         expect(neo.hasTakenRedPill).to.equal(YES);
         expect(neo.loveInterest).notTo.beNil();
+        expect(neo.hairColor).to.beNil();
         if (neo.loveInterest){
             expect(neo.loveInterest.name).to.equal(@"Trinity");
             expect(neo.loveInterest.age).to.equal(28);
             expect(neo.loveInterest.objectId).to.equal(2);
+        }
+        expect(neo.titles).notTo.beNil();
+        if (neo.titles){
+            expect(neo.titles[0]).to.equal(@"The One");
         }
     });
 });
@@ -54,6 +59,7 @@ describe(@"toJson", ^{
         expect(json[@"age"]).to.equal(@25);
         expect(json[@"name"]).to.equal(@"Neo");
         expect(json[@"love_interest"]).to.equal(@{@"id":@2,@"created_at":dateString,@"name":@"Trinity",@"age":@28,@"has_taken_red_pill":@YES});
+        expect(json[@"titles"]).to.equal(@[@"The One", @"The Messiah"]);
     });
 });
 

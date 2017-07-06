@@ -48,17 +48,7 @@
                 key = keyMap[propertyName];
             }
             
-            if (value || shouldIncludeNilProperties) {
-                if ([value isKindOfClass:[NSString class]] || [value isKindOfClass:[NSNumber class]] ) {
-                    json[key] = value;
-                }else if ([value isKindOfClass:[NSDate class]]){
-                    ISO8601DateFormatter *formatter = [[ISO8601DateFormatter alloc] init];
-                    formatter.includeTime = YES;
-                    json[key] = [formatter stringFromDate:value];
-                }else{
-                    json[key] = [self toJson:value includingNilProperties:shouldIncludeNilProperties];
-                }
-            }
+            [self setOrSerialize:value json:json key:key includingNilProperties:shouldIncludeNilProperties];
         }
     }
     free(properties);
@@ -68,7 +58,48 @@
     }
 }
 
++ (void)setOrSerialize:(id)value json:(NSMutableDictionary *)json key:(NSString *)key includingNilProperties:(BOOL)shouldIncludeNilProperties
+{
+    if (value == nil && shouldIncludeNilProperties) {
+        json[key] = value;
+    }else if (value) {
+        if ([value isKindOfClass:[NSArray class]]) {
+            NSMutableArray *array = [NSMutableArray new];
+            for (id arrayValue in ((NSArray *)value)) {
+                [array addObject:[self jsonValueOf:arrayValue includingNilProperties:shouldIncludeNilProperties]];
+            }
+            json[key] = [array copy];
+        }else{
+            json[key] = [self jsonValueOf:value includingNilProperties:shouldIncludeNilProperties];
+        }
+    }
+}
+
++ (id)jsonValueOf:(id)value includingNilProperties:(BOOL)shouldIncludeNilProperties
+{
+    if ([value isKindOfClass:[NSString class]] || [value isKindOfClass:[NSNumber class]] ) {
+        return value;
+    }else if ([value isKindOfClass:[NSDate class]]){
+        ISO8601DateFormatter *formatter = [[ISO8601DateFormatter alloc] init];
+        formatter.includeTime = YES;
+        return [formatter stringFromDate:value];
+    }else if ([value isKindOfClass:[NSArray class]]) {
+        NSMutableArray *array = [NSMutableArray new];
+        for (id arrayValue in ((NSArray *)value)) {
+            [arrayValue addObject:[self jsonValueOf:arrayValue includingNilProperties:shouldIncludeNilProperties]];
+        }
+        return array;
+    }else{
+        return [self toJson:value includingNilProperties:shouldIncludeNilProperties];
+    }
+}
+
 + (id)modelOfClass:(Class)clazz fromJson:(NSDictionary *)json
+{
+    return [self modelOfClass:clazz fromJson:json includingNulls:NO];
+}
+
++ (id)modelOfClass:(Class)clazz fromJson:(NSDictionary *)json includingNulls:(BOOL)shouldIncludeNulls
 {
     id model = [[clazz alloc] init];
     
@@ -101,7 +132,7 @@
                 }else{
                     [model setValue:[self modelOfClass:propertyClass fromJson:json[key]] forKey:propertyName];
                 }
-            }else{
+            }else if (![value isKindOfClass:[NSNull class]] || shouldIncludeNulls){
                 [model setValue:json[key] forKey:propertyName];
             }
         }
